@@ -16,7 +16,7 @@ export class BookService {
         authors: item.volumeInfo.authors,
         thumbnail: item.volumeInfo.imageLinks?.thumbnail,
         description: item.volumeInfo.description,
-        infoLink: item.volumeInfo.infoLink // <- ссылка на книгу
+        infoLink: item.volumeInfo.infoLink 
       })) || []),
       catchError(() => of([]))
     );
