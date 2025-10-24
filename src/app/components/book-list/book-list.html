@@ -1,0 +1,7 @@
+<div class="container">
+  <app-search-bar (search)="onSearch($event)"></app-search-bar>
+
+  <div class="grid">
+    <app-book-card *ngFor="let b of books" [book]="b"></app-book-card>
+  </div>
+</div>

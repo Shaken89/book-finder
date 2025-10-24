@@ -1,0 +1,11 @@
+<mat-card>
+  <img *ngIf="book.thumbnail" [src]="book.thumbnail" alt="{{ book.title }}" />
+  <mat-card-title>{{ book.title }}</mat-card-title>
+  <mat-card-subtitle>{{ book.authors?.join(', ') }}</mat-card-subtitle>
+  <mat-card-content>
+    <p>{{ book.description || 'No description available.' }}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <a mat-button color="primary" [href]="book.infoLink" target="_blank" *ngIf="book.infoLink">Read</a>
+  </mat-card-actions>
+</mat-card>
